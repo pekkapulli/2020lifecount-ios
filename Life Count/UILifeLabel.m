@@ -89,10 +89,10 @@
 - (void)handlePanGesture:(UIPanGestureRecognizer *)sender {
     CGPoint pt = [sender translationInView:self];
     if (!self.lockedForLifeChange && !self.lockedForPan) {
-        if (fabsf(pt.y) > 10) { //Lock to vertical pan
+        if (fabs(pt.y) > 10) { //Lock to vertical pan
             self.lockedForLifeChange = TRUE;
             self.lockedForPan = FALSE;
-        } else if (fabsf(pt.x) > 10) { //Lock to horizontal pan
+        } else if (fabs(pt.x) > 10) { //Lock to horizontal pan
             self.lockedForPan = TRUE;
             self.lockedForLifeChange = FALSE;
         }
@@ -174,7 +174,7 @@
         self.changeTimer = [NSTimer scheduledTimerWithTimeInterval:WAIT_TIME target:self selector:@selector(fireLifeTotalChange:) userInfo:nil repeats:NO];
         
         number += amount;
-        [self setText:[NSString stringWithFormat:@"%d",number]];
+        [self setText:[NSString stringWithFormat:@"%ld",(long)number]];
         [self.delegate lifeLabelChangedValue:self];
     }
 }

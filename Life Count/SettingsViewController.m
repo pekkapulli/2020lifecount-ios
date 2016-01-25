@@ -84,7 +84,7 @@
     } else {
         newValue = 20;
     }
-    NSString *newStringValue = [NSString stringWithFormat:@"%d",newValue];
+    NSString *newStringValue = [NSString stringWithFormat:@"%ld",(long)newValue];
     [lifeTotalButton setTitle:newStringValue forState:UIControlStateNormal];
     [lifeTotalButton setTitle:newStringValue forState:UIControlStateHighlighted];
     [[NSUserDefaults standardUserDefaults]  setValue:newStringValue forKey:@"starting life total"];

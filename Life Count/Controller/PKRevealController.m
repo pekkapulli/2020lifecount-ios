@@ -1190,7 +1190,7 @@ NSString * const PKRevealControllerRecognizesResetTapOnFrontViewKey = @"PKReveal
 
 - (BOOL)shouldMoveFrontViewLeftwardsForVelocity:(CGFloat)velocity
 {
-    return (isNegative(velocity) && fabsf(velocity) > self.quickSwipeVelocity);
+    return (isNegative(velocity) && fabs(velocity) > self.quickSwipeVelocity);
 }
 
 - (void)snapFrontViewToClosestEdge
@@ -1420,7 +1420,7 @@ NSString * const PKRevealControllerRecognizesResetTapOnFrontViewKey = @"PKReveal
     }
 }
 
-- (NSUInteger)supportedInterfaceOrientations
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
     if ([self hasLeftViewController] && [self hasRightViewController])
     {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScoreViewController">
@@ -21,8 +21,8 @@
                 <outlet property="refreshLabelLeft" destination="153" id="157"/>
                 <outlet property="refreshLabelRight" destination="78" id="150"/>
                 <outlet property="settingsViewButton" destination="163" id="165"/>
-                <outlet property="uiBackgroundImage" destination="4" id="158"/>
-                <outlet property="uiDarkBackgroundImage" destination="167" id="168"/>
+                <outlet property="uiBackground" destination="den-Co-6qo" id="mLv-Mw-cPm"/>
+                <outlet property="uiDarkBackground" destination="DcH-et-dmD" id="0bu-kA-xev"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -31,14 +31,16 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView contentMode="scaleToFill" image="bg.png" id="4" userLabel="light_bg">
+                <view contentMode="scaleToFill" id="den-Co-6qo" userLabel="light_bg">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" image="bg_dark.png" id="167" userLabel="dark_bg">
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" id="DcH-et-dmD" userLabel="dark_bg">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                </imageView>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.19607843137254902" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
                 <label opaque="NO" clipsSubviews="YES" contentMode="left" restorationIdentifier="enemyLifeLabel" text="20" textAlignment="center" lineBreakMode="clip" minimumFontSize="30" id="71" customClass="UILifeLabel">
                     <rect key="frame" x="38" y="5" width="200" height="310"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -65,7 +67,7 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <accessibility key="accessibilityConfiguration">
-                        <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                        <accessibilityTraits key="traits" notEnabled="YES"/>
                     </accessibility>
                 </view>
                 <view userInteractionEnabled="NO" contentMode="scaleToFill" id="77" userLabel="Reset right">
@@ -86,7 +88,7 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <accessibility key="accessibilityConfiguration">
-                        <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                        <accessibilityTraits key="traits" notEnabled="YES"/>
                     </accessibility>
                 </view>
                 <label opaque="NO" clipsSubviews="YES" contentMode="left" restorationIdentifier="ownLifeLabel" text="20" textAlignment="center" lineBreakMode="clip" minimumFontSize="30" id="62" customClass="UILifeLabel">
@@ -164,13 +166,12 @@
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
     <resources>
-        <image name="bg.png" width="480" height="320"/>
-        <image name="bg_dark.png" width="480" height="320"/>
         <image name="log_icon.png" width="25" height="25"/>
         <image name="poison_blue.png" width="25" height="46"/>
         <image name="poison_red.png" width="25" height="46"/>

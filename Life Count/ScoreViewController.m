@@ -35,7 +35,7 @@
     self.historyViewController = ((HistoryViewController *)self.revealController.rightViewController);
     
     UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
-    [self.uiBackgroundImage addGestureRecognizer:panRecognizer];
+    [self.uiBackground addGestureRecognizer:panRecognizer];
     self.ownLifeLabel.delegate = self;
     self.enemyLifeLabel.delegate = self;
     self.ownPoisonLabel.delegate = self;
@@ -115,7 +115,7 @@
     self.refreshIndicatorViewLeft.frame = refreshIndicatorPositionLeft;
     self.refreshIndicatorViewRight.frame = refreshIndicatorPositionRight;
     
-    if (fabsf(pt.x) > [[UIScreen mainScreen] bounds].size.height*[self getResetThreshold]) {
+    if (fabs(pt.x) > [[UIScreen mainScreen] bounds].size.height*[self getResetThreshold]) {
         if (!self.refreshed) {
             [self.ownLifeLabel reset];
             [self.enemyLifeLabel reset];
@@ -343,7 +343,7 @@
     }
     
     if ([defaults boolForKey:@"dark color scheme"]) {
-        [self.uiDarkBackgroundImage setAlpha:1];
+        [self.uiDarkBackground setAlpha:1];
     }
     
     if ([defaults boolForKey:@"poison counter shown"]) {
@@ -358,11 +358,11 @@
 - (void)setColorSchemeToDark:(BOOL)setDark {
     if (setDark) {
         [UIView animateWithDuration:0.50 animations:^{
-            [self.uiDarkBackgroundImage setAlpha:1];
+            [self.uiDarkBackground setAlpha:1];
         }];
     } else {
         [UIView animateWithDuration:0.50 animations:^{
-            [self.uiDarkBackgroundImage setAlpha:0];
+            [self.uiDarkBackground setAlpha:0];
         }];
     }
 }

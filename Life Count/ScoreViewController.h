@@ -14,8 +14,8 @@
 
 @interface ScoreViewController : UIViewController <UILifeLabelDelegate>
 
-@property (strong, nonatomic) IBOutlet UIImageView *uiBackgroundImage;
-@property (strong, nonatomic) IBOutlet UIImageView *uiDarkBackgroundImage;
+@property (strong, nonatomic) IBOutlet UIView *uiBackground;
+@property (strong, nonatomic) IBOutlet UIView *uiDarkBackground;
 @property (strong, nonatomic) IBOutlet UIButton *historyViewButton;
 @property (strong, nonatomic) IBOutlet UIButton *settingsViewButton;
 @property (strong, nonatomic) IBOutlet UILifeLabel *ownLifeLabel;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="iPad_ScoreViewController">
@@ -21,8 +21,8 @@
                 <outlet property="refreshLabelLeft" destination="RNI-YO-7qC" id="6Hq-G1-ena"/>
                 <outlet property="refreshLabelRight" destination="vik-zp-7co" id="Aoa-Sl-4M9"/>
                 <outlet property="settingsViewButton" destination="X8x-iF-teR" id="Im5-f4-3y2"/>
-                <outlet property="uiBackgroundImage" destination="DgE-Iq-Zin" id="ipY-ug-3rJ"/>
-                <outlet property="uiDarkBackgroundImage" destination="sop-RN-0ah" id="Vtl-6e-Ab7"/>
+                <outlet property="uiBackground" destination="Pv9-cY-2zN" id="Z9R-ZQ-bNu"/>
+                <outlet property="uiDarkBackground" destination="xYz-Ko-kX1" id="rYX-aq-mnf"/>
                 <outlet property="view" destination="2" id="3"/>
             </connections>
         </placeholder>
@@ -31,14 +31,16 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView contentMode="scaleToFill" image="bg_ipad.png" id="DgE-Iq-Zin" userLabel="light_bg">
+                <view contentMode="scaleToFill" id="Pv9-cY-2zN" userLabel="light_bg">
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" image="bg_dark.png" id="sop-RN-0ah" userLabel="dark_bg">
-                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                </imageView>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" id="xYz-Ko-kX1" userLabel="dark_bg">
+                    <rect key="frame" x="0.0" y="0.0" width="1025" height="768"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.1960784314" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
                 <label opaque="NO" clipsSubviews="YES" contentMode="left" restorationIdentifier="ownLifeLabel" text="20" textAlignment="center" lineBreakMode="clip" minimumFontSize="30" id="OJc-Nz-1hF" customClass="UILifeLabel">
                     <rect key="frame" x="512" y="0.0" width="380" height="768"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -72,7 +74,7 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <accessibility key="accessibilityConfiguration">
-                        <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                        <accessibilityTraits key="traits" notEnabled="YES"/>
                     </accessibility>
                 </view>
                 <view userInteractionEnabled="NO" contentMode="scaleToFill" id="yhE-xR-eA1" userLabel="Reset right">
@@ -93,7 +95,7 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <accessibility key="accessibilityConfiguration">
-                        <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                        <accessibilityTraits key="traits" notEnabled="YES"/>
                     </accessibility>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="X8x-iF-teR">
@@ -112,15 +114,15 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" id="MYp-MX-F5O" userLabel="Own Poison View">
-                    <rect key="frame" x="641.99999999999989" y="503" width="165.00000000000003" height="265"/>
+                    <rect key="frame" x="642" y="503" width="165" height="265"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="center" placeholderIntrinsicWidth="25" placeholderIntrinsicHeight="46" image="poison_blue_ipad.png" id="2wh-CW-RDH">
-                            <rect key="frame" x="0.0" y="0.0" width="51.000000000000021" height="265"/>
+                            <rect key="frame" x="0.0" y="0.0" width="51" height="265"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
                         <label opaque="NO" clipsSubviews="YES" contentMode="right" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" id="iGb-U1-qSU" customClass="UIPoisonLabel">
-                            <rect key="frame" x="1.0658141036401503e-14" y="0.0" width="165" height="265"/>
+                            <rect key="frame" x="0.0" y="0.0" width="165" height="265"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="100"/>
                             <color key="textColor" red="0.58909735689999998" green="0.71767477059999996" blue="0.84183673469999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -149,11 +151,11 @@
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="center" placeholderIntrinsicWidth="25" placeholderIntrinsicHeight="46" image="poison_red_ipad.png" id="akF-id-Oly">
-                            <rect key="frame" x="0.0" y="0.0" width="50.999999999999993" height="265"/>
+                            <rect key="frame" x="0.0" y="0.0" width="51" height="265"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
                         <label opaque="NO" clipsSubviews="YES" contentMode="right" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" id="KdN-VV-O59" customClass="UIPoisonLabel">
-                            <rect key="frame" x="-3.5527136788005009e-15" y="0.0" width="165" height="265"/>
+                            <rect key="frame" x="0.0" y="0.0" width="165" height="265"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="100"/>
                             <color key="textColor" red="0.79215686269999996" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
@@ -164,13 +166,11 @@
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
     <resources>
-        <image name="bg_dark.png" width="480" height="320"/>
-        <image name="bg_ipad.png" width="1024" height="768"/>
         <image name="log_icon.png" width="25" height="25"/>
         <image name="poison_blue_ipad.png" width="51" height="100"/>
         <image name="poison_red_ipad.png" width="51" height="100"/>

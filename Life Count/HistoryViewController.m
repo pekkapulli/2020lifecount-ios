@@ -91,9 +91,9 @@
 
 - (void)lifeTotalChangedWithPlayer:(BOOL)ownLife isPoison:(BOOL)poison toAmount:(NSInteger)newAmount change:(NSInteger)change {
     if (change != 0) {
-        NSString *ownLifeValue = ownLife?[NSString stringWithFormat:@"%d", newAmount]:@"";
-        NSString *enemyLifeValue = ownLife?@"":[NSString stringWithFormat:@"%d", newAmount];
-        NSString *changeAmount = change < 0 ? [NSString stringWithFormat:@"%d",change]:[NSString stringWithFormat:@"+%d",change];
+        NSString *ownLifeValue = ownLife?[NSString stringWithFormat:@"%ld", (long)newAmount]:@"";
+        NSString *enemyLifeValue = ownLife?@"":[NSString stringWithFormat:@"%ld", (long)newAmount];
+        NSString *changeAmount = change < 0 ? [NSString stringWithFormat:@"%ld",(long)change]:[NSString stringWithFormat:@"+%ld",(long)change];
         NSString *time = [self getCurrentTime];
         
         NSDictionary *row = [NSDictionary dictionaryWithObjects:
@@ -139,7 +139,7 @@
 }
 
 - (NSString*)getCurrentTime {
-    return [NSString stringWithFormat:@"%d", self.minuteCount];
+    return [NSString stringWithFormat:@"%ld", (long)self.minuteCount];
 }
 
 - (void)addMinute {
