@@ -99,10 +99,10 @@
                     </accessibility>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="X8x-iF-teR">
-                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                    <state key="normal" image="settings_icon.png">
+                    <state key="normal" image="SettingsIcon">
                         <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -132,10 +132,10 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3gG-2c-Giw">
-                    <rect key="frame" x="974" y="0.0" width="50" height="50"/>
+                    <rect key="frame" x="976" y="0.0" width="48" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                    <state key="normal" image="log_icon.png">
+                    <state key="normal" image="HistoryIcon">
                         <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -171,10 +171,10 @@
         </view>
     </objects>
     <resources>
-        <image name="log_icon.png" width="25" height="25"/>
+        <image name="HistoryIcon" width="24" height="24"/>
+        <image name="SettingsIcon" width="24" height="24"/>
         <image name="poison_blue_ipad.png" width="51" height="100"/>
         <image name="poison_red_ipad.png" width="51" height="100"/>
         <image name="refresh_arrow_ipad.png" width="75" height="75"/>
-        <image name="settings_icon.png" width="25" height="25"/>
     </resources>
 </document>
