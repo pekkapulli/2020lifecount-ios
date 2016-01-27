@@ -16,4 +16,8 @@
 
 @property (strong, nonatomic) UILabel *ownDice;
 @property (strong, nonatomic) UILabel *enemyDice;
+@property (assign, nonatomic) int ownNumber;
+@property (assign, nonatomic) int enemyNumber;
+@property (assign, nonatomic) int timerStep;
+
 @end

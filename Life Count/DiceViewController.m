@@ -33,7 +33,6 @@
         
         UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismiss)];
         [self.view addGestureRecognizer:tapRecognizer];
-        
     }
     return self;
 }
@@ -42,7 +41,35 @@
 {
     [super viewDidLoad];
     
-    // animate?
+    self.timerStep = arc4random() % 30 + 10;
+    self.ownNumber = arc4random() % 20;
+    self.enemyNumber = arc4random() % 20;
+    
+    [self timerFired];
+}
+
+- (void)timerFired
+{
+    
+    self.timerStep = self.timerStep - 1;
+    
+    if (self.timerStep > 0)
+    {
+        self.ownNumber = (self.ownNumber + 1) % 20;
+        self.enemyNumber = (self.enemyNumber + 1) % 20;
+        
+        self.enemyDice.text = [NSString stringWithFormat:@"%i", self.ownNumber];
+        self.ownDice.text = [NSString stringWithFormat:@"%i", self.enemyNumber];
+        float nextInterval = 0.05;
+        
+        
+        [NSTimer scheduledTimerWithTimeInterval:nextInterval
+                                         target:self
+                                       selector:@selector(timerFired)
+                                       userInfo:nil
+                                        repeats:NO];
+    }
+
 }
 
 - (void)dismiss
