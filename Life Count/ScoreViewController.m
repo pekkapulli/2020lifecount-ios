@@ -8,6 +8,7 @@
 
 #import "ScoreViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "DiceViewController.h"
 
 @interface ScoreViewController ()
 
@@ -383,6 +384,22 @@
 
 - (float)getResetThreshold {
     return 0.5;
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake)
+    {
+        [self shakeHappened];
+    }
+}
+
+- (void)shakeHappened
+{
+    UIColor *bgColor =  self.uiDarkBackground.alpha ? self.uiDarkBackground.backgroundColor : self.uiBackground.backgroundColor;
+    DiceViewController *diceViewController = [[DiceViewController alloc] initWithBackground:bgColor own:self.ownLifeLabel enemy:self.enemyLifeLabel];
+    diceViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:diceViewController animated:YES completion:nil];
 }
 
 @end

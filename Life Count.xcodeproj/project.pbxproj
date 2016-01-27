@@ -48,6 +48,7 @@
 		3BE5FC1C164AA7B6003E6129 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE5FBF4164AA7B5003E6129 /* Foundation.framework */; };
 		3BF0840C173DA97A00E8AC12 /* point.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF0840A173DA97A00E8AC12 /* point.png */; };
 		3BF0840D173DA97A00E8AC12 /* point@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF0840B173DA97A00E8AC12 /* point@2x.png */; };
+		6C3F6DE81C5946BA001C2B43 /* DiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3F6DE71C5946BA001C2B43 /* DiceViewController.m */; };
 		EBD21A6E1C56BF35004D6763 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD21A6D1C56BF35004D6763 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,8 @@
 		3BE5FC19164AA7B6003E6129 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		3BF0840A173DA97A00E8AC12 /* point.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = point.png; path = Resources/point.png; sourceTree = "<group>"; };
 		3BF0840B173DA97A00E8AC12 /* point@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "point@2x.png"; path = "Resources/point@2x.png"; sourceTree = "<group>"; };
+		6C3F6DE61C5946BA001C2B43 /* DiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiceViewController.h; sourceTree = "<group>"; };
+		6C3F6DE71C5946BA001C2B43 /* DiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiceViewController.m; sourceTree = "<group>"; };
 		EBD21A6D1C56BF35004D6763 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,29 +223,31 @@
 			children = (
 				3BE5FC01164AA7B5003E6129 /* AppDelegate.h */,
 				3BE5FC02164AA7B5003E6129 /* AppDelegate.m */,
-				3B65273617351ED70031B0E4 /* ScoreViewController.h */,
-				3B65273717351ED70031B0E4 /* ScoreViewController.m */,
-				3B65273817351ED70031B0E4 /* ScoreViewController.xib */,
+				6C3F6DE61C5946BA001C2B43 /* DiceViewController.h */,
+				6C3F6DE71C5946BA001C2B43 /* DiceViewController.m */,
+				3B8E5D6A173ADC2300C83001 /* HistoryViewCell.h */,
+				3B8E5D6B173ADC2300C83001 /* HistoryViewCell.m */,
+				3B20FCA0173C32F300AB0E59 /* HistoryViewCell.xib */,
+				3B50DA381732E0FB00D601E7 /* HistoryViewController.h */,
+				3B50DA391732E0FB00D601E7 /* HistoryViewController.m */,
+				3B50DA3A1732E0FB00D601E7 /* HistoryViewController.xib */,
 				3B2A86D217E8D601009E5866 /* iPad_ScoreViewController.h */,
 				3B2A86D317E8D601009E5866 /* iPad_ScoreViewController.m */,
 				3B2A86D417E8D601009E5866 /* iPad_ScoreViewController.xib */,
+				EBD21A6D1C56BF35004D6763 /* Launch Screen.storyboard */,
+				3B65273617351ED70031B0E4 /* ScoreViewController.h */,
+				3B65273717351ED70031B0E4 /* ScoreViewController.m */,
+				3B65273817351ED70031B0E4 /* ScoreViewController.xib */,
+				3B6AAABA176199B8003C48CE /* SettingsViewController.h */,
+				3B6AAABB176199B8003C48CE /* SettingsViewController.m */,
+				3B6AAABC176199B8003C48CE /* SettingsViewController.xib */,
 				3BB16E781667A88C00B385CC /* UILifeLabel.h */,
 				3BB16E791667A88C00B385CC /* UILifeLabel.m */,
 				3B0B354617D4F6DC00A109A5 /* UIPoisonLabel.h */,
 				3B0B354717D4F6DC00A109A5 /* UIPoisonLabel.m */,
-				3B50DA381732E0FB00D601E7 /* HistoryViewController.h */,
-				3B50DA391732E0FB00D601E7 /* HistoryViewController.m */,
-				3B50DA3A1732E0FB00D601E7 /* HistoryViewController.xib */,
-				3B8E5D6A173ADC2300C83001 /* HistoryViewCell.h */,
-				3B8E5D6B173ADC2300C83001 /* HistoryViewCell.m */,
-				3B20FCA0173C32F300AB0E59 /* HistoryViewCell.xib */,
-				3B6AAABA176199B8003C48CE /* SettingsViewController.h */,
-				3B6AAABB176199B8003C48CE /* SettingsViewController.m */,
-				3B6AAABC176199B8003C48CE /* SettingsViewController.xib */,
 				3BC482FA1735383A00430FF4 /* Controller */,
 				3BDA2AC3166651D800DFECD6 /* Resources */,
 				3BE5FBF9164AA7B5003E6129 /* Supporting Files */,
-				EBD21A6D1C56BF35004D6763 /* Launch Screen.storyboard */,
 			);
 			path = "Life Count";
 			sourceTree = "<group>";
@@ -397,6 +402,7 @@
 				3BE5FBFF164AA7B5003E6129 /* main.m in Sources */,
 				3BE5FC03164AA7B5003E6129 /* AppDelegate.m in Sources */,
 				3BB16E7A1667A88C00B385CC /* UILifeLabel.m in Sources */,
+				6C3F6DE81C5946BA001C2B43 /* DiceViewController.m in Sources */,
 				3B50DA3B1732E0FB00D601E7 /* HistoryViewController.m in Sources */,
 				3B65273917351ED70031B0E4 /* ScoreViewController.m in Sources */,
 				3BC483011735383A00430FF4 /* PKRevealController.m in Sources */,
