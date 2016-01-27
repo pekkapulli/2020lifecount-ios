@@ -41,6 +41,11 @@
 {
     [super viewDidLoad];
     
+    [self startAnimation];
+}
+
+- (void)startAnimation
+{
     self.timerStep = arc4random() % 30 + 10;
     self.ownNumber = arc4random() % 20;
     self.enemyNumber = arc4random() % 20;
@@ -70,6 +75,14 @@
                                         repeats:NO];
     }
 
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake)
+    {
+        [self startAnimation];
+    }
 }
 
 - (void)dismiss
