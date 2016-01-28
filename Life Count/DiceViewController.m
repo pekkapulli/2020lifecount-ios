@@ -9,6 +9,7 @@
 #import "DiceViewController.h"
 #import "UILifeLabel.h"
 #import "Masonry/Masonry.h"
+#import <Google/Analytics.h>
 
 @implementation DiceViewController
 
@@ -57,6 +58,17 @@
     [super viewDidLoad];
     
     [self startAnimation];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    /*
+     id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+     [tracker set:kGAIScreenName value:@"DiceViewController"];
+     [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
+     */
 }
 
 - (void)startAnimation

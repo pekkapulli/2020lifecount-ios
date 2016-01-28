@@ -12,6 +12,7 @@
 #import "iPad_ScoreViewController.h"
 #import "HistoryViewController.h"
 #import "SettingsViewController.h"
+#import <Google/Analytics.h>
 
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -56,6 +57,13 @@
         [self.revealController setMinimumWidth:240.0f maximumWidth:240.0f forViewController:settingsViewController];
     }
     
+    /*
+    // Configure tracker from GoogleService-Info.plist.
+    NSError *configureError;
+    [[GGLContext sharedInstance] configureWithError:&configureError];
+    NSAssert(!configureError, @"Error configuring Google services: %@", configureError);
+    */
+
     
     return YES;
     

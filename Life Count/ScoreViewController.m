@@ -9,6 +9,7 @@
 #import "ScoreViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "DiceViewController.h"
+#import <Google/Analytics.h>
 
 @interface ScoreViewController ()
 
@@ -59,6 +60,17 @@
     [self showingFrontView];
     
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    /*
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"ScoreViewController"];
+    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
+    */
 }
 
 - (void)didReceiveMemoryWarning
