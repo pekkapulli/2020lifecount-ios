@@ -81,8 +81,8 @@
 - (void)startAnimation
 {
     self.timerStep = arc4random() % 30 + 10;
-    self.ownNumber = arc4random() % 20;
-    self.enemyNumber = arc4random() % 20;
+    self.ownNumber = arc4random() % 20 + 1;
+    self.enemyNumber = arc4random() % 20 + 1;
     
     [self timerFired];
 }
