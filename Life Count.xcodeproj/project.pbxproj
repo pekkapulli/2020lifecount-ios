@@ -46,6 +46,7 @@
 		3BE5FC09164AA7B5003E6129 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE5FC08164AA7B5003E6129 /* Default-568h@2x.png */; };
 		3BF0840C173DA97A00E8AC12 /* point.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF0840A173DA97A00E8AC12 /* point.png */; };
 		3BF0840D173DA97A00E8AC12 /* point@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF0840B173DA97A00E8AC12 /* point@2x.png */; };
+		6C386C981C5AB85600E2A124 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C386C971C5AB85600E2A124 /* GoogleService-Info.plist */; };
 		6C3F6DE81C5946BA001C2B43 /* DiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3F6DE71C5946BA001C2B43 /* DiceViewController.m */; };
 		EBD21A6E1C56BF35004D6763 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD21A6D1C56BF35004D6763 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
@@ -105,6 +106,7 @@
 		3BF0840A173DA97A00E8AC12 /* point.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = point.png; path = Resources/point.png; sourceTree = "<group>"; };
 		3BF0840B173DA97A00E8AC12 /* point@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "point@2x.png"; path = "Resources/point@2x.png"; sourceTree = "<group>"; };
 		3CFDB84693D6B7036B7190CD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6C386C971C5AB85600E2A124 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		6C3F6DE61C5946BA001C2B43 /* DiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiceViewController.h; sourceTree = "<group>"; };
 		6C3F6DE71C5946BA001C2B43 /* DiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiceViewController.m; sourceTree = "<group>"; };
 		703F14A83B410BF5DA430A90 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,6 +239,7 @@
 		3BE5FBF9164AA7B5003E6129 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6C386C971C5AB85600E2A124 /* GoogleService-Info.plist */,
 				3BE5FBFA164AA7B5003E6129 /* Life Count-Info.plist */,
 				3BE5FBFB164AA7B5003E6129 /* InfoPlist.strings */,
 				3BE5FBFE164AA7B5003E6129 /* main.m */,
@@ -334,6 +337,7 @@
 				3B20FCA1173C32F300AB0E59 /* HistoryViewCell.xib in Resources */,
 				3BF0840C173DA97A00E8AC12 /* point.png in Resources */,
 				3BF0840D173DA97A00E8AC12 /* point@2x.png in Resources */,
+				6C386C981C5AB85600E2A124 /* GoogleService-Info.plist in Resources */,
 				3B6AAABE176199B8003C48CE /* SettingsViewController.xib in Resources */,
 				3B2A86CD17E8D5C8009E5866 /* bg_ipad.png in Resources */,
 				EBD21A6E1C56BF35004D6763 /* Launch Screen.storyboard in Resources */,

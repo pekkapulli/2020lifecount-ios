@@ -57,14 +57,11 @@
         [self.revealController setMinimumWidth:240.0f maximumWidth:240.0f forViewController:settingsViewController];
     }
     
-    /*
     // Configure tracker from GoogleService-Info.plist.
     NSError *configureError;
     [[GGLContext sharedInstance] configureWithError:&configureError];
     NSAssert(!configureError, @"Error configuring Google services: %@", configureError);
-    */
 
-    
     return YES;
     
     // Step 5: Take a look at the Left/RightDemoViewController files. They're self-sufficient as to the configuration of their reveal widths for instance.
