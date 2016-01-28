@@ -22,5 +22,5 @@
 
 @property (strong, nonatomic) UIImageView *ownDiceView;
 @property (strong, nonatomic) UIImageView *enemyDiceView;
-
+@property (strong, nonatomic) UIImageView *closeButton;
 @end

@@ -25,15 +25,19 @@
         self.ownDiceView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"DiceBGBlue"]];
         [self.view addSubview:self.ownDiceView];
         
+        self.closeButton = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CloseIcon"]];
+        
+        [self.view addSubview:self.closeButton];
+        
         self.ownDice = [[UILabel alloc] initWithFrame:own.frame];
-        self.ownDice.font = own.font;
+        self.ownDice.font = [UIFont fontWithName:@"Futura-CondensedMedium" size:56];
         self.ownDice.textColor = own.textColor;
         self.ownDice.textAlignment = own.textAlignment;
         [self.view addSubview:self.ownDice];
         self.ownDice.text = [NSString stringWithFormat:@"%d", arc4random() % 20];
         
         self.enemyDice = [[UILabel alloc] initWithFrame:enemy.frame];
-        self.enemyDice.font = enemy.font;
+        self.enemyDice.font = [UIFont fontWithName:@"Futura-CondensedMedium" size:56];
         self.enemyDice.textColor = enemy.textColor;
         self.enemyDice.textAlignment = enemy.textAlignment;
         [self.view addSubview:self.enemyDice];
@@ -45,6 +49,11 @@
         
         [self.enemyDiceView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.equalTo(self.enemyDice);
+        }];
+        
+        [self.closeButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self.view).offset(-15);
+            make.top.equalTo(self.view).offset(15);
         }];
         
         UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismiss)];
