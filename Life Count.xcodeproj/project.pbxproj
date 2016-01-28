@@ -44,24 +44,11 @@
 		3BE5FC05164AA7B5003E6129 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE5FC04164AA7B5003E6129 /* Default.png */; };
 		3BE5FC07164AA7B5003E6129 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE5FC06164AA7B5003E6129 /* Default@2x.png */; };
 		3BE5FC09164AA7B5003E6129 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BE5FC08164AA7B5003E6129 /* Default-568h@2x.png */; };
-		3BE5FC1A164AA7B6003E6129 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE5FC19164AA7B6003E6129 /* SenTestingKit.framework */; };
-		3BE5FC1B164AA7B6003E6129 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE5FBF2164AA7B5003E6129 /* UIKit.framework */; };
-		3BE5FC1C164AA7B6003E6129 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE5FBF4164AA7B5003E6129 /* Foundation.framework */; };
 		3BF0840C173DA97A00E8AC12 /* point.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF0840A173DA97A00E8AC12 /* point.png */; };
 		3BF0840D173DA97A00E8AC12 /* point@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF0840B173DA97A00E8AC12 /* point@2x.png */; };
 		6C3F6DE81C5946BA001C2B43 /* DiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3F6DE71C5946BA001C2B43 /* DiceViewController.m */; };
 		EBD21A6E1C56BF35004D6763 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD21A6D1C56BF35004D6763 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		3BE5FC1D164AA7B6003E6129 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3BE5FBE5164AA7B5003E6129 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3BE5FBED164AA7B5003E6129;
-			remoteInfo = "Life Count";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3B0B354617D4F6DC00A109A5 /* UIPoisonLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPoisonLabel.h; sourceTree = "<group>"; };
@@ -114,7 +101,6 @@
 		3BE5FC04164AA7B5003E6129 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
 		3BE5FC06164AA7B5003E6129 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Default@2x.png"; sourceTree = "<group>"; };
 		3BE5FC08164AA7B5003E6129 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
-		3BE5FC18164AA7B6003E6129 /* Life CountTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Life CountTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE5FC19164AA7B6003E6129 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		3BF0840A173DA97A00E8AC12 /* point.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = point.png; path = Resources/point.png; sourceTree = "<group>"; };
 		3BF0840B173DA97A00E8AC12 /* point@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "point@2x.png"; path = "Resources/point@2x.png"; sourceTree = "<group>"; };
@@ -136,16 +122,6 @@
 				3BE5FBF5164AA7B5003E6129 /* Foundation.framework in Frameworks */,
 				3BE5FBF7164AA7B5003E6129 /* CoreGraphics.framework in Frameworks */,
 				08C85BF1939A7971CCAC6DA3 /* Pods.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3BE5FC14164AA7B5003E6129 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3BE5FC1A164AA7B6003E6129 /* SenTestingKit.framework in Frameworks */,
-				3BE5FC1B164AA7B6003E6129 /* UIKit.framework in Frameworks */,
-				3BE5FC1C164AA7B6003E6129 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				3BE5FBEE164AA7B5003E6129 /* life count.app */,
-				3BE5FC18164AA7B6003E6129 /* Life CountTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -305,25 +280,6 @@
 			productReference = 3BE5FBEE164AA7B5003E6129 /* life count.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3BE5FC17164AA7B5003E6129 /* Life CountTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3BE5FC2D164AA7B6003E6129 /* Build configuration list for PBXNativeTarget "Life CountTests" */;
-			buildPhases = (
-				3BE5FC13164AA7B5003E6129 /* Sources */,
-				3BE5FC14164AA7B5003E6129 /* Frameworks */,
-				3BE5FC15164AA7B5003E6129 /* Resources */,
-				3BE5FC16164AA7B5003E6129 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3BE5FC1E164AA7B6003E6129 /* PBXTargetDependency */,
-			);
-			name = "Life CountTests";
-			productName = "Life CountTests";
-			productReference = 3BE5FC18164AA7B6003E6129 /* Life CountTests.octest */;
-			productType = "com.apple.product-type.bundle.ocunit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -352,7 +308,6 @@
 			projectRoot = "";
 			targets = (
 				3BE5FBED164AA7B5003E6129 /* life count */,
-				3BE5FC17164AA7B5003E6129 /* Life CountTests */,
 			);
 		};
 /* End PBXProject section */
@@ -388,29 +343,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3BE5FC15164AA7B5003E6129 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3BE5FC16164AA7B5003E6129 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
 		CA6623632F8D3C942E143E09 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -479,22 +414,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3BE5FC13164AA7B5003E6129 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3BE5FC1E164AA7B6003E6129 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3BE5FBED164AA7B5003E6129 /* life count */;
-			targetProxy = 3BE5FC1D164AA7B6003E6129 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3BE5FBFB164AA7B5003E6129 /* InfoPlist.strings */ = {
@@ -532,7 +452,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "EE3A3D07-187A-44FA-87B2-8913D57D731A";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EE3A3D07-187A-44FA-87B2-8913D57D731A";
@@ -557,7 +477,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "EE3A3D07-187A-44FA-87B2-8913D57D731A";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EE3A3D07-187A-44FA-87B2-8913D57D731A";
@@ -577,7 +497,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Life Count/Life Count-Prefix.pch";
 				INFOPLIST_FILE = "Life Count/Life Count-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pekkapulli.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "life count";
 				PROVISIONING_PROFILE = "FB2CCB8A-1FAE-4866-85DA-9C34F2A2118C";
@@ -597,47 +517,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Life Count/Life Count-Prefix.pch";
 				INFOPLIST_FILE = "Life Count/Life Count-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pekkapulli.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "life count";
 				PROVISIONING_PROFILE = "7FA2C835-EBEB-4AB2-ACB0-7AE0BC478E1A";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7FA2C835-EBEB-4AB2-ACB0-7AE0BC478E1A";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		3BE5FC2E164AA7B6003E6129 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Life Count.app/Life Count";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Life Count/Life Count-Prefix.pch";
-				INFOPLIST_FILE = "Life CountTests/Life CountTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		3BE5FC2F164AA7B6003E6129 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Life Count.app/Life Count";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Life Count/Life Count-Prefix.pch";
-				INFOPLIST_FILE = "Life CountTests/Life CountTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -658,15 +544,6 @@
 			buildConfigurations = (
 				3BE5FC2B164AA7B6003E6129 /* Debug */,
 				3BE5FC2C164AA7B6003E6129 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3BE5FC2D164AA7B6003E6129 /* Build configuration list for PBXNativeTarget "Life CountTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3BE5FC2E164AA7B6003E6129 /* Debug */,
-				3BE5FC2F164AA7B6003E6129 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

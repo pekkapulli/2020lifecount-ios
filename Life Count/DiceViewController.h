@@ -20,4 +20,7 @@
 @property (assign, nonatomic) int enemyNumber;
 @property (assign, nonatomic) int timerStep;
 
+@property (strong, nonatomic) UIImageView *ownDiceView;
+@property (strong, nonatomic) UIImageView *enemyDiceView;
+
 @end

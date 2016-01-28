@@ -8,6 +8,7 @@
 
 #import "DiceViewController.h"
 #import "UILifeLabel.h"
+#import "Masonry/Masonry.h"
 
 @implementation DiceViewController
 
@@ -16,6 +17,12 @@
     self = [super init];
     if (self) {
         self.view.backgroundColor = backgroundColor;
+        
+        self.enemyDiceView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"DiceBGRed"]];
+        [self.view addSubview:self.enemyDiceView];
+        
+        self.ownDiceView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"DiceBGBlue"]];
+        [self.view addSubview:self.ownDiceView];
         
         self.ownDice = [[UILabel alloc] initWithFrame:own.frame];
         self.ownDice.font = own.font;
@@ -30,6 +37,14 @@
         self.enemyDice.textAlignment = enemy.textAlignment;
         [self.view addSubview:self.enemyDice];
         self.enemyDice.text = [NSString stringWithFormat:@"%d", arc4random() % 20];
+        
+        [self.ownDiceView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(self.ownDice);
+        }];
+        
+        [self.enemyDiceView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(self.enemyDice);
+        }];
         
         UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismiss)];
         [self.view addGestureRecognizer:tapRecognizer];
