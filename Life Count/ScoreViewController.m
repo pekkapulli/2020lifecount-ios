@@ -408,7 +408,7 @@
 {
     UIColor *bgColor =  self.uiDarkBackground.alpha ? self.uiDarkBackground.backgroundColor : self.uiBackground.backgroundColor;
     DiceViewController *diceViewController = [[DiceViewController alloc] initWithBackground:bgColor own:self.ownLifeLabel enemy:self.enemyLifeLabel];
-    diceViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    diceViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
     [self presentViewController:diceViewController animated:YES completion:nil];
 }
 

@@ -34,14 +34,14 @@
         self.ownDice.textColor = own.textColor;
         self.ownDice.textAlignment = own.textAlignment;
         [self.view addSubview:self.ownDice];
-        self.ownDice.text = [NSString stringWithFormat:@"%d", arc4random() % 20];
+        self.ownDice.text = [NSString stringWithFormat:@"%d", [self randomD20]];
         
         self.enemyDice = [[UILabel alloc] initWithFrame:enemy.frame];
         self.enemyDice.font = [UIFont fontWithName:@"Futura-CondensedMedium" size:56];
         self.enemyDice.textColor = enemy.textColor;
         self.enemyDice.textAlignment = enemy.textAlignment;
         [self.view addSubview:self.enemyDice];
-        self.enemyDice.text = [NSString stringWithFormat:@"%d", arc4random() % 20];
+        self.enemyDice.text = [NSString stringWithFormat:@"%d", [self randomD20]];
         
         [self.ownDiceView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.equalTo(self.ownDice);
@@ -80,9 +80,9 @@
 
 - (void)startAnimation
 {
-    self.timerStep = arc4random() % 30 + 10;
-    self.ownNumber = arc4random() % 20 + 1;
-    self.enemyNumber = arc4random() % 20 + 1;
+    self.timerStep = arc4random() % 10 + 11;
+    self.ownNumber = [self randomD20];
+    self.enemyNumber = [self randomD20];
     
     [self timerFired];
 }
@@ -90,16 +90,19 @@
 - (void)timerFired
 {
     
-    self.timerStep = self.timerStep - 1;
+    self.timerStep -= 1;
     
     if (self.timerStep > 0)
     {
-        self.ownNumber = (self.ownNumber + 1) % 20;
-        self.enemyNumber = (self.enemyNumber + 1) % 20;
+        self.ownNumber = [self randomD20];
+        self.enemyNumber = [self randomD20];
         
         self.enemyDice.text = [NSString stringWithFormat:@"%i", self.ownNumber];
         self.ownDice.text = [NSString stringWithFormat:@"%i", self.enemyNumber];
-        float nextInterval = 0.05;
+        
+        //this looks weird but provides a nice slowing curve
+        float nextInterval = 0.2 - (pow(self.timerStep, 2)/200.0);
+        if (nextInterval < 0.05) { nextInterval = 0.05; }
         
         
         [NSTimer scheduledTimerWithTimeInterval:nextInterval
@@ -108,7 +111,11 @@
                                        userInfo:nil
                                         repeats:NO];
     }
+}
 
+- (int)randomD20
+{
+    return (arc4random() % 20) + 1;
 }
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
