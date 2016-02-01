@@ -89,7 +89,7 @@
 		3BC482FF1735383A00430FF4 /* UIViewController+PKRevealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PKRevealController.h"; sourceTree = "<group>"; };
 		3BC483001735383A00430FF4 /* UIViewController+PKRevealController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PKRevealController.m"; sourceTree = "<group>"; };
 		3BC4830417353B0000430FF4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		3BE5FBEE164AA7B5003E6129 /* life count.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "life count.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BE5FBEE164AA7B5003E6129 /* Life Count.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Life Count.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE5FBF2164AA7B5003E6129 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3BE5FBF4164AA7B5003E6129 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3BE5FBF6164AA7B5003E6129 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -184,7 +184,7 @@
 		3BE5FBEF164AA7B5003E6129 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3BE5FBEE164AA7B5003E6129 /* life count.app */,
+				3BE5FBEE164AA7B5003E6129 /* Life Count.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -280,7 +280,7 @@
 			);
 			name = "life count";
 			productName = "Life Count";
-			productReference = 3BE5FBEE164AA7B5003E6129 /* life count.app */;
+			productReference = 3BE5FBEE164AA7B5003E6129 /* Life Count.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -444,6 +444,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Pekka Pulli (J2JQNN275X)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Pekka Pulli (J2JQNN275X)";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -457,7 +458,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PROVISIONING_PROFILE = "EE3A3D07-187A-44FA-87B2-8913D57D731A";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EE3A3D07-187A-44FA-87B2-8913D57D731A";
 				SDKROOT = iphoneos;
@@ -477,6 +478,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Pekka Pulli (J2JQNN275X)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Pekka Pulli (J2JQNN275X)";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -496,16 +498,16 @@
 			baseConfigurationReference = 3CFDB84693D6B7036B7190CD /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Pekka Pulli (J2JQNN275X)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Pekka Pulli (J2JQNN275X)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Life Count/Life Count-Prefix.pch";
 				INFOPLIST_FILE = "Life Count/Life Count-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pekkapulli.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "life count";
-				PROVISIONING_PROFILE = "FB2CCB8A-1FAE-4866-85DA-9C34F2A2118C";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FB2CCB8A-1FAE-4866-85DA-9C34F2A2118C";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pekkapulli.life-count";
+				PRODUCT_NAME = "Life Count";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "d0e4ced8-082f-40d8-80f9-1cb95dddb1ba";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -516,16 +518,16 @@
 			baseConfigurationReference = C53BB24CC11A38B1DC629DD1 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Pekka Pulli (KRELEAF59C)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Pekka Pulli (KRELEAF59C)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Life Count/Life Count-Prefix.pch";
 				INFOPLIST_FILE = "Life Count/Life Count-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pekkapulli.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "life count";
-				PROVISIONING_PROFILE = "7FA2C835-EBEB-4AB2-ACB0-7AE0BC478E1A";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7FA2C835-EBEB-4AB2-ACB0-7AE0BC478E1A";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pekkapulli.life-count";
+				PRODUCT_NAME = "Life Count";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "d0e4ced8-082f-40d8-80f9-1cb95dddb1ba";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
