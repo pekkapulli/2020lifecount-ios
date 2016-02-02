@@ -67,6 +67,7 @@
     [super viewDidLoad];
     
     [self startAnimation];
+    [self startAnimationEndSequence];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -80,11 +81,16 @@
 
 - (void)startAnimation
 {
-    self.timerStep = arc4random() % 10 + 11;
+    self.timerStep = 9000;
     self.ownNumber = [self randomD20];
     self.enemyNumber = [self randomD20];
     
     [self timerFired];
+}
+
+- (void)startAnimationEndSequence
+{
+    self.timerStep = arc4random() % 10 + 11;
 }
 
 - (void)timerFired
@@ -123,6 +129,14 @@
     if (motion == UIEventSubtypeMotionShake)
     {
         [self startAnimation];
+    }
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake)
+    {
+        [self startAnimationEndSequence];
     }
 }
 
