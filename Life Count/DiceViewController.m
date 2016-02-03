@@ -67,24 +67,22 @@
     [super viewDidLoad];
     
     [self startAnimation];
-    [self startAnimationEndSequence];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
-     id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-     [tracker set:kGAIScreenName value:@"DiceViewController"];
-     [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"DiceViewController"];
+    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
+    
+    [self becomeFirstResponder];
 }
 
 - (void)startAnimation
 {
-    self.timerStep = 9000;
-    self.ownNumber = [self randomD20];
-    self.enemyNumber = [self randomD20];
-    
+    self.timerStep = 40;
     [self timerFired];
 }
 
@@ -95,7 +93,6 @@
 
 - (void)timerFired
 {
-    
     self.timerStep -= 1;
     
     if (self.timerStep > 0)
@@ -143,6 +140,10 @@
 - (void)dismiss
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(BOOL)canBecomeFirstResponder {
+    return YES;
 }
 
 @end
