@@ -108,10 +108,18 @@
                         <action selector="rateMeButtonPressed:" destination="-1" eventType="touchUpInside" id="526"/>
                     </connections>
                 </button>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="InstructionSwipe" id="m6V-dU-IXN">
+                    <rect key="frame" x="66" y="204" width="40" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                </imageView>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="InstructionShake" id="8vQ-jo-zVV">
+                    <rect key="frame" x="125" y="194" width="53" height="42"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Designed and developed by Pekka Pulli and Janne Kiirikki." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4">
-                    <rect key="frame" x="34" y="236" width="173" height="40"/>
+                    <rect key="frame" x="57" y="239" width="126" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="16"/>
+                    <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="12"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -124,5 +132,7 @@
     <resources>
         <image name="ColorSchemeDark" width="71" height="40"/>
         <image name="ColorSchemeLight" width="71" height="40"/>
+        <image name="InstructionShake" width="53" height="42"/>
+        <image name="InstructionSwipe" width="40" height="26"/>
     </resources>
 </document>
