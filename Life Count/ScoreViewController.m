@@ -38,6 +38,9 @@
     
     UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
     [self.uiBackground addGestureRecognizer:panRecognizer];
+    
+    //TODO Orientation change for iPad [[NSNotificationCenter defaultCenter] addObserver:self  selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification  object:nil];
+    
     self.ownLifeLabel.delegate = self;
     self.enemyLifeLabel.delegate = self;
     self.ownPoisonLabel.delegate = self;
@@ -48,13 +51,7 @@
     self.ownPoisonLabel.isOwn = true;
     self.enemyPoisonLabel.isOwn = false;
     
-    self.refreshIndicatorViewLeft.alpha = 0.0;
-    self.refreshIndicatorViewRight.alpha = 0.0;
-    self.refreshIndicatorViewLeftStartX = self.refreshIndicatorViewLeft.frame.origin.x;
-    CGRect rightRefreshFrame = self.refreshIndicatorViewRight.frame;
-    rightRefreshFrame.origin.x = [[UIScreen mainScreen] bounds].size.width-5;
-    self.refreshIndicatorViewRight.frame = rightRefreshFrame;
-    self.refreshIndicatorViewRightStartX = self.refreshIndicatorViewRight.frame.origin.x;
+    [self setupRefreshIndicatorView];
     
     [self readUserDefaults];
     [self showingFrontView];
@@ -69,6 +66,11 @@
     [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self setupLifeLabelStartLocations];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -78,13 +80,6 @@
 #pragma mark Handle touch gestures
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    if (self.ownLifeLabelLocationStartX == -5000) {
-        self.ownLifeLabelLocationStartX = self.ownLifeLabel.frame.origin.x;
-        self.enemyLifeLabelLocationStartX = self.enemyLifeLabel.frame.origin.x;
-        self.ownPoisonViewLocationStartX = self.ownPoisonView.frame.origin.x;
-        self.enemyPoisonViewLocationStartX = self.enemyPoisonView.frame.origin.x;
-    }
-    
     [self rotateRefreshArrowsToDefault:YES withAnimation:NO];
     
     self.refreshLabelLeft.text = @"Reset";
@@ -92,6 +87,10 @@
 }
 
 - (void)handlePanGesture:(UIPanGestureRecognizer *)sender {
+    if (self.ownLifeLabelLocationStartX == -5000) {
+        [self setupLifeLabelStartLocations];
+    }
+    
     [self.refreshIndicatorViewLeft.layer removeAllAnimations];
     CGPoint pt = [sender translationInView:self.view];
     
@@ -182,6 +181,33 @@
         self.refreshed = NO;
         self.eventOrigin = nil;
     }
+}
+
+/* TODO : Orientation change for iPad
+- (void)orientationChanged:(NSNotification *)notification{
+    NSLog(@"rotate!");
+    NSLog(@"ownlifeX before: %f", self.ownLifeLabelLocationStartX);
+    [self setupRefreshIndicatorView];
+    [self setupLifeLabelStartLocations];
+    NSLog(@"ownlifeC after: %f", self.ownLifeLabelLocationStartX);
+}
+*/
+
+- (void)setupRefreshIndicatorView {
+    self.refreshIndicatorViewLeft.alpha = 0.0;
+    self.refreshIndicatorViewRight.alpha = 0.0;
+    self.refreshIndicatorViewLeftStartX = self.refreshIndicatorViewLeft.frame.origin.x;
+    CGRect rightRefreshFrame = self.refreshIndicatorViewRight.frame;
+    rightRefreshFrame.origin.x = [[UIScreen mainScreen] bounds].size.width-5;
+    self.refreshIndicatorViewRight.frame = rightRefreshFrame;
+    self.refreshIndicatorViewRightStartX = self.refreshIndicatorViewRight.frame.origin.x;
+}
+
+-(void)setupLifeLabelStartLocations {
+    self.ownLifeLabelLocationStartX = self.ownLifeLabel.frame.origin.x;
+    self.enemyLifeLabelLocationStartX = self.enemyLifeLabel.frame.origin.x;
+    self.ownPoisonViewLocationStartX = self.ownPoisonView.frame.origin.x;
+    self.enemyPoisonViewLocationStartX = self.enemyPoisonView.frame.origin.x;
 }
 
 -(void)rotateRefreshArrowsToDefault:(BOOL)toDefault withAnimation:(BOOL)animated {

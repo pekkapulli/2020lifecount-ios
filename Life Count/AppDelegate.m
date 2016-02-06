@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "Controller/PKRevealController.h"
 #import "ScoreViewController.h"
-#import "iPad_ScoreViewController.h"
 #import "HistoryViewController.h"
 #import "SettingsViewController.h"
 #import <Google/Analytics.h>
@@ -26,15 +25,9 @@
     UIViewController *settingsViewController;
     UIViewController *scoreViewController;
     
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        historyViewController = [[HistoryViewController alloc] init];
-        settingsViewController = [[SettingsViewController alloc] init];
-        scoreViewController = [[iPad_ScoreViewController alloc] init];
-    } else {
-        historyViewController = [[HistoryViewController alloc] init];
-        settingsViewController = [[SettingsViewController alloc] init];
-        scoreViewController = [[ScoreViewController alloc] init];
-    }
+    historyViewController = [[HistoryViewController alloc] init];
+    settingsViewController = [[SettingsViewController alloc] init];
+    scoreViewController = [[ScoreViewController alloc] init];
     
     // Step 2: Configure an options dictionary for the PKRevealController if necessary - in most cases the default behaviour should suffice. See PKRevealController.h for more option keys.
     

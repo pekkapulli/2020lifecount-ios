@@ -43,7 +43,7 @@
                 </view>
                 <label opaque="NO" clipsSubviews="YES" contentMode="left" restorationIdentifier="enemyLifeLabel" text="20" textAlignment="center" lineBreakMode="clip" minimumFontSize="30" id="71" customClass="UILifeLabel">
                     <rect key="frame" x="38" y="5" width="200" height="310"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="tintColor" red="0.79215686269999996" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="150"/>
                     <color key="textColor" red="0.89411764705882346" green="0.6705882352941176" blue="0.6705882352941176" alpha="1" colorSpace="calibratedRGB"/>
@@ -93,7 +93,7 @@
                 </view>
                 <label opaque="NO" clipsSubviews="YES" contentMode="left" restorationIdentifier="ownLifeLabel" text="20" textAlignment="center" lineBreakMode="clip" minimumFontSize="30" id="62" customClass="UILifeLabel">
                     <rect key="frame" x="241" y="5" width="200" height="310"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="150"/>
                     <color key="textColor" red="0.58909735689999998" green="0.71767477059999996" blue="0.84183673469999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
