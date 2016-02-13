@@ -21,13 +21,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // Step 1: Create your controllers.
-    UIViewController *historyViewController;
-    UIViewController *settingsViewController;
-    UIViewController *scoreViewController;
-    
-    historyViewController = [[HistoryViewController alloc] init];
-    settingsViewController = [[SettingsViewController alloc] init];
-    scoreViewController = [[ScoreViewController alloc] init];
+    UIViewController *historyViewController = [[HistoryViewController alloc] init];;
+    UIViewController *settingsViewController = [[SettingsViewController alloc] init];
+    UIViewController *scoreViewController = [[ScoreViewController alloc] init];
     
     // Step 2: Configure an options dictionary for the PKRevealController if necessary - in most cases the default behaviour should suffice. See PKRevealController.h for more option keys.
     
